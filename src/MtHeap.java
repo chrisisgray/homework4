@@ -20,7 +20,7 @@ public class MtHeap extends MtBT implements IHeap {
     }
 
     @Override
-    // An empty heap merged with another heap is the other heap (identity).
+    // An empty heap merged with another heap is the other heap
     public IHeap merge(IHeap withHeap) {
         return withHeap;
     }

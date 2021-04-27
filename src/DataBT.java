@@ -35,26 +35,22 @@ public class DataBT implements IBinTree {
 
     //checks if the given tree is a heap
     public boolean isHeap(){
-        if (left.smallerRoot(data) && right.smallerRoot(data)){
+        if (left.smallerRoot(this.data) && right.smallerRoot(this.data)){
             return left.isHeap() && right.isHeap();
         }
         return false;
-
     }
     //checks if the given int is smaller than data
-    public boolean smallerRoot (int a){
-        return data >= a;
-
+    public boolean smallerRoot (int e){
+        return data >= e;
     }
+
     // creates list from the given tree
     public LinkedList<Integer> makeList() {
-        LinkedList<Integer> result = new LinkedList<>();
+        LinkedList<Integer> result = new LinkedList<Integer>();
         result.add(this.data);
-
         result.addAll(this.right.makeList());
-
         result.addAll(this.left.makeList());
-
         return result;
     }
 

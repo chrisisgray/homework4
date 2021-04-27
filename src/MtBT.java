@@ -28,7 +28,7 @@ class MtBT implements IBinTree {
         return true;
     }
     //list is empty bc the tree is empty
-    public LinkedList<Integer> makeList() {return new LinkedList<>();}
+    public LinkedList<Integer> makeList() {return new LinkedList<Integer>();}
 
     //returns empty bc the tree is empty
     public boolean empty() {

@@ -1,4 +1,3 @@
-import java.util.Random;
 
 interface IHeap extends IBinTree {
  // adds given element to the heap without removing other elements
