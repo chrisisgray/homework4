@@ -24,14 +24,14 @@ class MtBT implements IBinTree {
     }
 
     //returns true bc the root is equal to 0
-    public boolean smallerRoot(int a) {
+    public boolean smallerRoot(int e) {
         return true;
     }
     //list is empty bc the tree is empty
-    public LinkedList<Integer> makeList() {return new LinkedList<Integer>();}
+    public LinkedList<Integer> makeListOfElements() {return new LinkedList<Integer>();}
 
     //returns empty bc the tree is empty
-    public boolean empty() {
+    public boolean isEmpty() {
         return true;
     }
 }

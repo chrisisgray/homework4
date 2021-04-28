@@ -10,10 +10,10 @@ public interface IBinTree {
  //checks if tree is heap
  boolean isHeap();
  //checks if the given integer is smaller than the data
- boolean smallerRoot(int a);
+ boolean smallerRoot(int e);
  //makes a list for given tree
- LinkedList<Integer> makeList();
+ LinkedList<Integer> makeListOfElements();
  //checks if the list is empty
- boolean empty();
+ boolean isEmpty();
 }
 

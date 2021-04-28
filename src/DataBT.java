@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.lang.Math;
 
 public class DataBT implements IBinTree {
     int data;
@@ -35,7 +36,7 @@ public class DataBT implements IBinTree {
 
     //checks if the given tree is a heap
     public boolean isHeap(){
-        if (left.smallerRoot(this.data) && right.smallerRoot(this.data)){
+        if (left.smallerRoot(data) && right.smallerRoot(data)){
             return left.isHeap() && right.isHeap();
         }
         return false;
@@ -46,16 +47,17 @@ public class DataBT implements IBinTree {
     }
 
     // creates list from the given tree
-    public LinkedList<Integer> makeList() {
+    public LinkedList<Integer> makeListOfElements() {
         LinkedList<Integer> result = new LinkedList<Integer>();
         result.add(this.data);
-        result.addAll(this.right.makeList());
-        result.addAll(this.left.makeList());
+        result.addAll(this.right.makeListOfElements());
+        result.addAll(this.left.makeListOfElements());
         return result;
     }
 
     //checks if its empty
-    public boolean empty() {
+    //returns false because this is an instance of a nonEmpty (DataBT) Binary Tree
+    public boolean isEmpty() {
         return false;
     }
 }

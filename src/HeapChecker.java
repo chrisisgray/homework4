@@ -14,8 +14,8 @@ public class HeapChecker {
      */
     boolean addEltTester(IHeap hOrig, int elt, IBinTree hAdded) {
 
-        LinkedList<Integer> original = hOrig.makeList();
-        LinkedList<Integer> added = hAdded.makeList();
+        LinkedList<Integer> original = hOrig.makeListOfElements();
+        LinkedList<Integer> added = hAdded.makeListOfElements();
         original.add(elt);
         Collections.sort(original);
         Collections.sort(added);
@@ -33,10 +33,10 @@ public class HeapChecker {
      * @return True if the original heap with the element removed, is the same as one of the heaps with the removed element
      */
     boolean remMinEltTester(IHeap hOrig, IBinTree hRemoved) {
-        LinkedList<Integer> original = hOrig.makeList();
-        LinkedList<Integer> removed = hRemoved.makeList();
+        LinkedList<Integer> original = hOrig.makeListOfElements();
+        LinkedList<Integer> removed = hRemoved.makeListOfElements();
 
-        if(hOrig.empty()){
+        if(hOrig.isEmpty()){
             return true;
         }
         else {
